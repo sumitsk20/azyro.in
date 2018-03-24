@@ -1,8 +1,9 @@
 Django==1.11.10
-flup==1.0.3.dev20110405
-pytz==2018.3
-django-ckeditor==5.4.0
-django-js-asset==1.0.0
-Pillow==5.0.0
-PyMySQL==0.8.0
+django-ckeditor==5.1.1
 django-jet==1.0.7
+django-js-asset==1.0.0
+flup==1.0.3.dev20110405
+Pillow==3.4.1
+PyMySQL==0.8.0
+pytz==2018.3
+wheel==0.30.0
