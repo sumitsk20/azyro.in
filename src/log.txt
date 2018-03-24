@@ -1,1 +1,20 @@
-No module named _dummy_thread
+cannot import name _imagingTraceback (most recent call last):
+  File "index.fcgi", line 10, in <module>
+    WSGIServer(get_wsgi_application()).run()
+  File "/home1/sumitsk20/public_html/azyro.in/lib/python2.7/site-packages/django/core/wsgi.py", line 13, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "/home1/sumitsk20/public_html/azyro.in/lib/python2.7/site-packages/django/__init__.py", line 27, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/home1/sumitsk20/public_html/azyro.in/lib/python2.7/site-packages/django/apps/registry.py", line 108, in populate
+    app_config.import_models()
+  File "/home1/sumitsk20/public_html/azyro.in/lib/python2.7/site-packages/django/apps/config.py", line 202, in import_models
+    self.models_module = import_module(models_module_name)
+  File "/opt/python27/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home1/sumitsk20/public_html/azyro.in/src/aztech/models.py", line 9, in <module>
+    from ckeditor_uploader.image import pillow_backend as backend
+  File "/home1/sumitsk20/public_html/azyro.in/lib/python2.7/site-packages/ckeditor_uploader/image/pillow_backend.py", line 10, in <module>
+    from PIL import Image, ImageOps
+  File "/home1/sumitsk20/public_html/azyro.in/lib/python2.7/site-packages/PIL/Image.py", line 67, in <module>
+    from PIL import _imaging as core
+ImportError: cannot import name _imaging
