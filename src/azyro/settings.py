@@ -25,7 +25,7 @@ SECRET_KEY = '8%-(pbw&qwc^0w3w_oy=u6lc#$%^qhesv%6-@y#y4zrsbk&iqq'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['www.azyro.in','azyro.in']
+ALLOWED_HOSTS = ['www.azyro.in','azyro.in','localhost','0.0.0.0','127.0.0.1']
 
 
 # Application definition

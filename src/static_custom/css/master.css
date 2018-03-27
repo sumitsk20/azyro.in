@@ -4799,3 +4799,46 @@ ul.social-top li a{
 .owl-slider .item {
 	height:500px;
 }
+
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+
+/* Track */
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 2px rgb(255,255,255);
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: rgb(73, 252, 127);
+    -webkit-box-shadow: inset 0 0 2px rgba(0,0,0,0.3);
+}
+::-webkit-scrollbar-thumb:window-inactive {
+  background: rgba(255,255,221,0.3);
+}
+::scrollbar {
+    width: 8px;
+}
+
+/* Track */
+::scrollbar-track {
+    box-shadow: inset 0 0 2px rgb(255,255,255);
+    border-radius: 10px;
+    border-radius: 10px;
+}
+/* Handle */
+::scrollbar-thumb {
+    border-radius: 10px;
+    border-radius: 10px;
+    background: rgb(73, 252, 127);
+    box-shadow: inset 0 0 2px rgba(0,0,0,0.3);
+}
+::scrollbar-thumb:window-inactive {
+  background: rgba(255,255,221,0.3);
+}

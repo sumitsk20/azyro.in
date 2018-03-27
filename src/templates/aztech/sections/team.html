@@ -1,0 +1,37 @@
+{% load i18n static %}
+  <!--=== Our Team Start ===-->
+  <section class="grey-bg" id="team">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8 section-heading">
+          <h2 class="text-uppercase wow fadeTop" data-wow-delay="0.1s">Meet Our Team</h2>
+          <h4 class="text-uppercase source-font wow fadeTop" data-wow-delay="0.2s">- We Are Stronger -</h4>
+        </div>
+      </div>
+      <div class="row">
+        <!--=== Member End ===-->
+          {% for member in team %}
+        <div class="col-md-3 col-sm-6 col-xs-12 wow fadeTop" data-wow-delay="0.3s">
+          <div class="team-member-container gallery-image-hover"> <img src="{{member.image.url}}" class="img-responsive" alt="team-01">
+            <div class="member-caption">
+              <div class="member-description text-center">
+                <div class="member-description-wrap">
+                  <h4 class="member-title">{{member.name}}</h4>
+                  <p class="member-subtitle">{{member.role}}</p>
+                  <p class="member-subtitle">{{member.experience}} year experience</p>
+                  <ul class="member-icons">
+                    <li class="social-icon"><a href="{{member.lp}}"><i class="fa fa-facebook"></i></a></li>
+                    <li class="social-icon"><a href="{{member.fp}}"><i class="fa fa-twitter"></i></a></li>
+                    <li class="social-icon"><a href="{{member.tp}}"><i class="fa fa-youtube"></i></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--=== Member End ===-->
+          {% endfor %}
+      </div>
+    </div>
+  </section>
+  <!--=== Our Team End ===-->
