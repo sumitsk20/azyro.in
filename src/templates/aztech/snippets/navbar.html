@@ -1,0 +1,36 @@
+{% load i18n static %}
+  <nav class="navbar navbar-default navbar-fixed navbar-transparent white bootsnav on no-full">
+
+    <div class="container">
+      <!--=== Start Atribute Navigation ===-->
+      <div class="attr-nav">
+        <ul class="social-media-dark social-top">
+          <li><a href="#" class="fa fa-facebook"></a></li>
+          <li><a href="#" class="fa fa-twitter"></a></li>
+          <li><a href="#" class="fa fa-linkedin-square"></a></li>
+        </ul>
+      </div>
+      <!--=== End Atribute Navigation ===-->
+
+      <!--=== Start Header Navigation ===-->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu"> <i class="mdi mdi-menu mdi-36px"></i> </button>
+        <div class="logo"> <a href="/"> <img class="logo logo-display" src="{% static 'images/azyro-logo-color.png' %}" alt="azyro infratech white logo"> <img class="logo logo-scrolled" src="{% static 'images/azyro-name.png' %}" alt="azyro infratech black logo"></a> </div>
+      </div>
+      <!--=== End Header Navigation ===-->
+
+      <!--=== Collect the nav links, forms, and other content for toggling ===-->
+      <div class="collapse navbar-collapse" id="navbar-menu">
+        <ul class="nav navbar-nav navbar-right" data-in="fadeIn" data-out="fadeOut">
+          <li><a class="page-scroll" href="#home">Home</a></li>
+          <li><a class="page-scroll" href="#who">Who We Are</a></li>
+          <li><a class="page-scroll" href="#services">What We Offer</a></li>
+          <li><a class="page-scroll" href="#need">Why you need us</a></li>
+          <li><a class="page-scroll" href="#projects">Projects</a></li>
+          <li><a class="page-scroll" href="#team">Team</a></li>
+          <li><a class="page-scroll" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <!--=== /.navbar-collapse ===-->
+    </div>
+  </nav>

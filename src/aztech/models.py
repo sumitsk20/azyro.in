@@ -7,9 +7,11 @@ from .utils import upload_location
 from django.db.models.signals import pre_save
 from django.utils.text import slugify
 from ckeditor_uploader.image import pillow_backend as backend
+from .constants import CONST_PROJECT_STATUS
+
 
 class BaseClass(models.Model):
-    name        = models.CharField(max_length=60)
+    name        = models.CharField(max_length=140)
     created     = models.DateTimeField(auto_now=False, auto_now_add=True)
     updated     = models.DateTimeField(auto_now=True, auto_now_add=False)
 
@@ -24,7 +26,9 @@ class BaseClass(models.Model):
 
 
 class Client(BaseClass):
-    logo = models.ImageField(upload_to=upload_location)
+    logo = models.ImageField(upload_to=upload_location, blank=True, null=True)
+    email = models.EmailField(blank=True, null=True)
+    mobile = models.CharField(max_length=12,blank=True, null=True)
 
     class Meta:
         verbose_name = "Client"
@@ -39,8 +43,14 @@ class Category(BaseClass):
 
 class Project(BaseClass):
     slug = models.SlugField(unique=True,null=True,editable=False,db_index=True)
+    status = models.CharField(choices=CONST_PROJECT_STATUS, max_length=25, default=CONST_PROJECT_STATUS[0])
     image = models.ImageField(upload_to=upload_location)
     content = RichTextField(blank=True,null=True)
+    site = models.CharField(max_length=150, blank=True, null=True)
+    location = models.CharField(max_length=150, blank=True, null=True)
+    start_date = models.DateTimeField(blank=True, null=True)
+    end_date = models.DateTimeField(blank=True, null=True)
+
 
     class Meta:
         verbose_name = "Project"
@@ -84,6 +94,7 @@ class Member(BaseClass):
 
 
 class Section(BaseClass):
+    tagline = models.CharField(max_length=160,help_text='Not more than 160 Character.')
     image = models.ImageField(upload_to=upload_location)
     content = RichTextField(blank=True,null=True)
 

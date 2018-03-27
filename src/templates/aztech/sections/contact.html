@@ -1,0 +1,56 @@
+{% load i18n static %}
+  <section class="contact-us white-bg" id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8 section-heading">
+          <h2 class="text-uppercase wow fadeTop" data-wow-delay="0.1s">Contact Us</h2>
+          <h4 class="text-uppercase source-font wow fadeTop" data-wow-delay="0.2s">- Get in Touch -</h4>
+        </div>
+      </div>
+      <div class="row mt-50">
+        <div class="col-md-8">
+          <form name="contact-form" id="contact-form" action="http://www.incognitothemes.com/azyro-landing/php/contact.php" method="POST">
+            <div class="messages"></div>
+            <div class="row">
+            	<div class="col-md-6">
+                	<div class="form-group wow fadeTop" data-wow-delay="0.1s">
+                      <label class="sr-only" for="name">Name</label>
+                      <input type="text" name="name" class="form-control" id="name-2" required placeholder="Your Name" data-error="Your Name is Required">
+                      <div class="help-block with-errors mt-20"></div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                	<div class="form-group wow fadeTop" data-wow-delay="0.2s">
+                      <label class="sr-only" for="email">Email</label>
+                      <input type="email" name="email" class="form-control" id="email-2" placeholder="Your Email" required data-error="Please Enter Valid Email">
+                      <div class="help-block with-errors mt-20"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group wow fadeTop" data-wow-delay="0.3s">
+              <label class="sr-only" for="subject">Subject</label>
+              <input type="text" name="subject" class="form-control" id="subject-2" placeholder="Your Subject">
+            </div>
+            <div class="form-group wow fadeTop" data-wow-delay="0.4s">
+              <label class="sr-only" for="message">Message</label>
+              <textarea name="message" class="form-control" id="message-2" rows="7" placeholder="Your Message" required data-error="Please, Leave us a message"></textarea>
+              <div class="help-block with-errors mt-20"></div>
+            </div>
+            <div class="wow fadeTop" data-wow-delay="0.5s">
+            	<button type="submit" name="submit" class="btn btn-color btn-circle">Send Mail</button>
+            </div>
+          </form>
+        </div>
+        <div class="col-md-4">
+        <div class="wow fadeTop" data-wow-delay="0.1s">
+          <h3>Postal Location</h3>
+          <address>507, 5th floor<br> Vipul Trade Centre, Sohna Road<br> Sector-48, Gurgaon, Haryana.<br>
+          <abbr title="Phone">M:</abbr> +91 9999 572 812<br>
+          <a href="mailto:#">nakul.azyro@gmail.com</a>
+          </address>
+         </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--=== Contact Us End ======-->
