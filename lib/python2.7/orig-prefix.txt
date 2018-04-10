@@ -1,1 +1,1 @@
-/opt/python27
+/usr
