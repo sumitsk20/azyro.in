@@ -1,17 +1,26 @@
-{% load i18n static %}
-  <!--=== Projects Start ===-->
-  <section class="white-bg pb-0" id="projects">
-  	<div class="container-fluid">
-    	<div class="row">
+{% extends "aztech/layout.html" %}
+
+{% block maincontent %}
+  <section class="title-hero-bg about-cover-bg parallax-effect">
+    <div class="container">
+      <div class="page-title text-center white-color">
         <div class="col-sm-8 section-heading">
           <h2 class="text-uppercase wow fadeTop" data-wow-delay="0.1s">Our Projects</h2>
           <h4 class="text-uppercase source-font wow fadeTop" data-wow-delay="0.2s">- Innovative Works -</h4>
         </div>
       </div>
     </div>
+  </section>
+
+<section class="white-bg pb-0" id="projects">
     <div class="container-fluid">
       <div class="row">
         <div class="portfolio-container text-center">
+          <ul id="portfolio-filter" class="list-inline filter-transparent wow fadeTop" data-wow-delay="0.1s">
+            <li class="active" data-group="all">All</li>
+            <li data-group="ongoing">Ongoing</li>
+            <li data-group="completed">Completed</li>
+          </ul>
           <ul id="portfolio-grid" class="three-column hover-two">
             {% for project in projects %}
             <li class="portfolio-item wow fadeIn" data-wow-delay="0.1s" data-groups='["all", "{{project.status}}"]'>
@@ -36,9 +45,8 @@
             </li>
             {% endfor %}
           </ul>
-          <a class="btn btn-color btn-circle btn-animate mt-10 mb-10 wow fadeInUp" data-wow-delay="0.3s" href="{% url 'projects' %}"><span>View all project at once <i class="mdi mdi-arrow-right"></i></span></a>
         </div>
       </div>
     </div>
   </section>
-  <!--=== Project End ===-->
+{% endblock maincontent %}

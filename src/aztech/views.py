@@ -5,13 +5,51 @@ from django.shortcuts import render
 
 from .models import *
 
+
 def index_view(request):
-    projects = Project.objects.all()
+    projects = Project.objects.filter(~models.Q(image=''), show=True)[:3]
     team = Member.objects.all()
     clients = Client.objects.all()
+    services = Service.objects.all()[:8]
+    if services.count() % 4 == 0:
+        d4 = True
+    elif services.count() % 3 == 0:
+        d3 = True
     context = {
         "projects":projects,
         "team":team,
         "clients":clients,
+        "services":services,
     }
     return render(request,"aztech/index.html",context)
+
+
+def about_view(request):
+    projects = Project.objects.all()
+    context = {
+        "projects":projects,
+    }
+    return render(request,"aztech/page/about.html",context)
+
+
+def project_list_view(request):
+    projects = Project.objects.all().order_by('show')
+    context = {
+        "projects":projects,
+    }
+    return render(request,"aztech/page/project.html",context)
+
+
+def gallery_view(request):
+    projects = Project.objects.all()
+    context = {
+        "projects":projects,
+    }
+    return render(request,"aztech/page/project.html",context)
+
+def need_us_view(request):
+    projects = Project.objects.all()
+    context = {
+        "projects":projects,
+    }
+    return render(request,"aztech/page/project.html",context)

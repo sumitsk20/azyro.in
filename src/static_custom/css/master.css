@@ -92,7 +92,7 @@ body {
 body {
     color: #888;
     background: #f1f1f1;
-    font-size:15px;
+    font-size:18px;
 	font-family: 'Source Sans Pro', sans-serif;
 }
 
@@ -1639,7 +1639,7 @@ ul#portfolio-grid.two-column>li{
 
 .portfolio-wrap {
     position: absolute;
-    top: 50%;
+    top: 25%;
     left: 0;
     width: 100%;
     margin-top: -88px;
@@ -1661,7 +1661,7 @@ ul#portfolio-grid.two-column>li{
     transition: 0.3s;
 }
 .portfolio:hover .portfolio-description .portfolio-title {
-    top: 30px;
+    top: 20px;
     opacity: 1;
     visibility: visible;
 }
@@ -4841,4 +4841,56 @@ ul.social-top li a{
 }
 ::scrollbar-thumb:window-inactive {
   background: rgba(255,255,221,0.3);
+}
+
+/*Service CSS*/
+
+.bg-light-green{
+background: rgba(73, 252, 127,0.8) !important;
+color:rgb(52,103,52) !important;
+}
+.bg-dark-green{
+background: rgba(52,103,52,0.8) !important;
+color:rgb(73, 252, 127) !important;
+}
+.serviceBox{
+    text-align: center;
+    border-radius:20px;
+    padding: 10px;
+    margin-bottom:20px;
+    height:150px;
+
+}
+.serviceBox .service-content{
+    border: 5px double rgba(255,255,255,0.5);
+    border-radius:20px;
+    text-align:middle;
+    position: relative;
+    padding-top:30px;
+    height:100%;
+    transition: all 0.3s ease-in-out;
+}
+.serviceBox:hover .service-content{
+    border: 5px double rgb(255,255,255);
+
+}
+.serviceBox .service-content i{
+    font-size: 30px;
+    margin-bottom: 10px;
+    transition: all 0.3s ease-in-out 0s;
+}
+.serviceBox:hover .service-content i{
+    transform: rotate(360deg);
+}
+.serviceBox .title{
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+.serviceBox .description{
+    font-size: 14px;
+    line-height: 25px;
+}
+section ul li {
+margin-left:15px;
 }

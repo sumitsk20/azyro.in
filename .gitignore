@@ -241,4 +241,9 @@ pyvenv.cfg
 [Tt]cl
 pip-selfcheck.json
 
+###Local sqlite DB ###
+
+*.sqlite3
+db.sqlite3
+
 # End of https://www.gitignore.io/api/git,venv,python,pycharm,virtualenv,pycharm+all
