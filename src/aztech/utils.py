@@ -1,4 +1,5 @@
 def upload_location(instance, filename):
+    Model = instance.__class__
     #filebase, extension = filename.split(".")
     #return "%s/%s.%s" %(instance.id, instance.id, extension)
     if not instance.id:

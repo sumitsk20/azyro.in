@@ -12,7 +12,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <title>Azyro | We value your waste.</title>
-<link rel="shortcut icon" href="{% static 'images/favicon.ico' %}">
+<link rel="shortcut icon" href="{% static 'images/favicon.png' %}">
 <link rel="stylesheet" href="{% static 'css/master.css' %}">
 <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
 </head>
@@ -32,7 +32,9 @@
 <div class="wrapper">
 
   <!--=== Header Start ===-->
-{% include "aztech/snippets/navbar.html" %}
+{% block nav %}
+{% include "aztech/snippets/link_navbar.html" %}
+{% endblock nav %}
   <!--=== Header End ===-->
 {% block maincontent %}
 

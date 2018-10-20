@@ -1,38 +1,46 @@
 {% load i18n static %}
   <!--=== What We Offer Start ===-->
-  <section class=" pb-0" id="services">
-    <div class="container-fluid">
+  <section class=" pb-0 pt-0" id="services">
+    <!--<section class="pt-10">-->
+      <!--<div class="container-fluid">-->
+      <!--<div class="row">-->
+        <!--{% for service in services %}-->
+        <!--<div class="col-lg-3 col-md-3 col-sm-6">-->
+          <!--<div class="serviceBox {% cycle 'bg-light-green' 'bg-dark-green' as rowcolors %} wow {% cycle 'fadeInLeft' 'fadeInRight' %}" data-wow-delay="0.1s">-->
+            <!--<div class="service-content text-center">-->
+              <!--<h3 class="title" style="color:{% cycle 'rgb(52,103,52)' 'rgb(73, 252, 127)' %}">{{service.name}}</h3>-->
+            <!--</div>-->
+          <!--</div>-->
+        <!--</div>-->
+          <!--{% endfor %}-->
+      <!--</div>-->
+      <!--</div>-->
+    <!--</section>-->
+    	<section id="what-we-do">
+		<div class="container-fluid">
       <div class="row">
         <div class="col-sm-8 section-heading">
           <h2 class="text-uppercase wow fadeTop" data-wow-delay="0.1s">Services <span class="theme-color">We offer</span></h2>
           <h4 class="text-uppercase source-font wow fadeTop" data-wow-delay="0.2s">- Our consulting services cover the wide range of services like development, management, design, drawings and business planning. -</h4>
         </div>
       </div>
-    </div>
-    <section class="pt-10">
-    <div class="col-md-6 col-sm-4 col-md-offset-7 col-sm-offset-5 bg-flex bg-flex-right ">
-      <div class="bg-flex-holder bg-flex-cover parallax-effect" style="background-image: url({% static 'images/3.png' %});"></div>
-    </div>
-    <div class="container-fluid">
-      <div class="col-md-5 col-sm-7 ">
-        <div class="pb-10">
-          <div class=" wow fadeTop text-justify" data-wow-delay="0.3s">
-            <p>We provide technically sound by working with and understanding our clients, by pushing boundaries, and by thinking laterally to find connections that others fail to make. We encourage teamwork and deliver to the best of our services, working as one firm by providing cost effective, economically viable, environmentally and socially acceptable solutions to our clients.</p>
-            <p> Our core expertise is to provide interdisciplinary services that deliver sustainable solutions and knowledge. </p>
-            <p>
-              <ul style="margin-left:25px;">
-              <li>Finding the best waste collection, transportation and treatment solution.</li>
-              <li>Provide information about the latest waste-management technologies and methods.</li>
-              <li>Planning, design and implementation.</li>
-              <li>Assistance with operation, maintenance, upgrading and optimization.</li>
-              <li>Strategic planning for siting, resource and management.</li>
-              <li>Sanitary Landfill and scientific closure.</li>
-              </ul>
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-    </section>
+			<div class="row mt-5">
+              {% for service  in services %}
+				<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-4 wow {% cycle 'fadeInLeft' 'fadeInRight' %}" data-wow-delay="0.1s">
+					<div class="card">
+						<div class="card-block">
+                        {% if service.image %}
+                          <img src="{{service.image.url}}" class="img-responsive wow spinRightZoom" style="position:absolute;top:10px;left:5px;">
+                        {% else %}
+                          <i class="mdi {{service.icon}} mdi-spin font-50px dark-icon wow spinRightZoom" style="position:absolute;top:10px;left:5px;"></i>
+                        {% endif %}
+						  <h3 class="card-title text-center">{{service.name}}</h3>
+						</div>
+					</div>
+                </div>
+              {% endfor %}
+            </div>
+		</div>
+	</section>
   </section>
   <!--=== What We Offer End ===-->

@@ -1,0 +1,62 @@
+{% load i18n static %}
+<!doctype html>
+{% get_current_language as LANGUAGE_CODE %}{% get_current_language_bidi as LANGUAGE_BIDI %}
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="{{ LANGUAGE_CODE|default:"en-us" }}" {% if LANGUAGE_BIDI %}dir="rtl"{% endif %}> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="{{ LANGUAGE_CODE|default:"en-us" }}" {% if LANGUAGE_BIDI %}dir="rtl"{% endif %}> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="{{ LANGUAGE_CODE|default:"en-us" }}" {% if LANGUAGE_BIDI %}dir="rtl"{% endif %}> <![endif]-->
+<!--[if gt IE 8]>
+<!--> <html class="no-js" lang="{{ LANGUAGE_CODE|default:"en-us" }}" {% if LANGUAGE_BIDI %}dir="rtl"{% endif %}> <!--<![endif]-->
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Azyro | We value your waste.</title>
+<link rel="shortcut icon" href="{% static 'images/favicon.png' %}">
+<link rel="stylesheet" href="{% static 'css/master.css' %}">
+<link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+</head>
+<body>
+    <!--[if lt IE 8]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+<!--=== Loader Start ======-->
+<div id="loader-overlay">
+  <div class="loader-wrapper">
+    <div class="azyro-pulse"></div>
+  </div>
+</div>
+<!--=== Loader End ======-->
+
+<!--=== Wrapper Start ===-->
+<div class="wrapper">
+
+  <!--=== Header Start ===-->
+{% block nav %}
+{% include "aztech/snippets/navbar.html" %}
+{% endblock nav %}
+  <!--=== Header End ===-->
+{% block maincontent %}
+
+{% endblock maincontent %}
+
+{% include "aztech/snippets/footer.html" %}
+
+  <!--=== GO TO TOP  ===-->
+  <a href="#" id="back-to-top" title="Back to top">&uarr;</a>
+  <!--=== GO TO TOP End ===-->
+
+</div>
+<!--=== Wrapper End ===-->
+
+<!--=== Javascript Plugins ===-->
+<script src="{% static 'js/jquery.min.js' %}"></script>
+<script src="{% static 'js/smoothscroll.js' %}"></script>
+<script src="{% static 'js/validator.js' %}"></script>
+<script src="{% static 'js/plugins.js' %}"></script>
+<script src="{% static 'js/master.js' %}"></script>
+<script src="{% static 'js/bootsnav.js' %}"></script>
+<!--=== Javascript Plugins End ===-->
+
+</body>
+</html>
