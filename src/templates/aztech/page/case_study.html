@@ -1,0 +1,44 @@
+{% extends "aztech/layout.html" %}
+
+{% block maincontent %}
+  <section class="title-hero-bg about-cover-bg parallax-effect">
+    <div class="container">
+      <div class="page-title text-center white-color">
+        <div class="col-sm-8 section-heading">
+          <h2 class="text-uppercase wow fadeTop" data-wow-delay="0.1s">Case Studies</h2>
+          <h4 class="text-uppercase source-font wow fadeTop" data-wow-delay="0.2s">
+            - Projects Case Studies -
+          </h4>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<section class="white-bg pb-0" id="services">
+    <div class="container-fluid">
+      <div class="row">
+          <ul id="portfolio-grid" class="three-column hover-two">
+            {% for service  in services %}
+            <li class="portfolio-item wow fadeIn" data-wow-delay="0.1s" data-groups='["all", "{{project.status}}"]'>
+              <div class="portfolio gallery-image-hover">
+                <div class="dark-overlay"></div>
+                {% if project.image %}
+                <img src="{{project.image.url}}" alt="{{project.name}}">
+                {% else %}
+                    <h3 class="portfolio-title">{{project.name}}</h3>{% endif %}
+                <div class="portfolio-wrap">
+                  <div class="portfolio-description">
+                    <p class="links">{{project.site}}</p>
+                    <p class="links">{{project.location}}</p>
+                  </div>
+                </div>
+              </div>
+              <!--=== /.portfolio ===-->
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock maincontent %}

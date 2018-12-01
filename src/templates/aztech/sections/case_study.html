@@ -1,0 +1,35 @@
+{% load i18n static %}
+  <!--=== Projects Start ===-->
+  <section class="white-bg pb-0" id="case-study">
+  	<div class="container-fluid">
+    	<div class="row">
+        <div class="col-sm-8 section-heading">
+          <h2 class="text-uppercase wow fadeTop" data-wow-delay="0.1s">Case Studies</h2>
+          <h4 class="text-uppercase source-font wow fadeTop" data-wow-delay="0.2s">- Innovative Works -</h4>
+        </div>
+      </div>
+    </div>
+<div class="row">
+<!--=== case End ===-->
+  {% for case in case_studies %}
+<div class="col-sm-6 col-xs-12 wow fadeTop" data-wow-delay="0.3s">
+  <div class="team-case-container gallery-image-hover"> <img src="{{case.image.url}}" class="img-responsive" alt="team-01">
+      <div class="case-description text-center">
+        <!--<div class="case-description-wrap">-->
+            {% if case.name %}
+          <h4 class="case-title">{{case.name}}</h4>
+            {% endif %}
+        <!--</div>-->
+      </div>
+  </div>
+</div>
+<!--=== case End ===-->
+  {% empty %}
+  <div class="case-description text-center">
+        <div class="case-description-wrap">
+          <h4 class="case-title">No Case Studies yet</h4>
+        </div>
+      </div>
+  {% endfor %}
+</div>
+  </section>

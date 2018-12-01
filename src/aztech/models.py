@@ -36,6 +36,9 @@ class Client(models.Model):
         verbose_name = "Client"
         verbose_name_plural = "Clients"
 
+    def __str__(self):
+        return self.name
+
 
 class Category(BaseClass):
     class Meta:
@@ -113,3 +116,37 @@ class Service(BaseClass):
     class Meta:
         verbose_name = "Service"
         verbose_name_plural = "Services"
+
+
+class Career(BaseClass):
+    job_name = models.CharField(max_length=300, blank=True, null=True)
+    position = models.CharField(max_length=300, blank=True, null=True)
+    qualification = models.CharField(max_length=300, blank=True, null=True)
+    job_type = models.CharField(max_length=500, blank=True, null=True, help_text='Job Type: Part-Time, Full-Time,'
+                                                                                 'Work from Home, Freelance, etc.'
+                                                                                 ' You can give comma separated list.')
+    location = models.CharField(max_length=256, blank=True, null=True)
+    no_of_position = models.CharField(max_length=256, blank=True, null=True)
+    experience = models.CharField(max_length=300, blank=True, null=True)
+    job_description = models.TextField(blank=True, null=True)
+    skill_required = models.TextField(max_length=500, blank=True, null=True)
+    remuneration = models.TextField(max_length=256, blank=True, null=True)
+
+    class Meta:
+        verbose_name = "Career"
+        verbose_name_plural = "Careers"
+
+
+
+
+class CaseStudy(BaseClass):
+    name = models.CharField(max_length=300, blank=True, null=True)
+    image = models.ImageField(upload_to=upload_location, blank=True,null=True)
+
+    class Meta:
+        verbose_name = "Case Study"
+        verbose_name_plural = "Case Studies"
+
+    def __str__(self):
+        return self.name if self.name else str(self.id)
+

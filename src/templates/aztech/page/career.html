@@ -1,0 +1,72 @@
+{% extends "aztech/layout.html" %}
+{% load static %}
+
+{% block maincontent %}
+<section class="title-hero-bg about-cover-bg parallax-effect">
+<div class="container">
+  <div class="page-title text-center white-color">
+    <div class="col-sm-8 section-heading">
+      <h2 class="text-uppercase wow fadeTop" data-wow-delay="0.1s"><span class="theme-color">Career</span> Oppurtunities</h2>
+      <h4 class="text-uppercase source-font wow fadeTop" data-wow-delay="0.2s">- Join Our Team -</h4>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="white-bg pt-30 pb-10 ">
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 text-center">
+            <h3>What we want from you</h3>
+            <p class="wow fadeTop" data-wow-delay="0.3s">
+                We are looking for individuals who are passionate and committed professionals, interested in working in a
+                highly challenging environment. Azyro Infratech recruits and develops resources for the future.
+                Depending on your area of expertise, Azyro is likely to have an opportunity for you to utilise and further
+                develop your expertise. If you are looking forward to make a difference, you have found the perfect place
+                to start. Jobs, Internships or  Volunteers., We at Azyro will be happy to hear from you, if you are adamant
+                about making a significant change and contributing towards it diligently in the process enriching yourself
+                along with benefitting others.
+            </p>
+        </div>
+        <div class="col-md-6 text-center">
+            <h3>Internship</h3>
+            <p class="wow fadeTop" data-wow-delay="0.3s">
+                The internship programme at Azyro Infratech, has been designed to hone up the skills of young persons and
+                give shape to their ideas about the waste management sector providing them on-ground experience, before
+                they launch themselves on a well-defined career choice. It is a one year long open ended programme commencing
+                on the 01st of every month through the year.
+            </p>
+        </div>
+    </div><br>
+            <p>Interested applicants, kindly send their CV’s along with the cover letter describing the purpose of the
+                internship to <a href="mailto:info@azyro.in">info@azyro.in</a> or <a href="mailto:nakul@azyro.in">nakul@azyro.in</a>
+            </p>
+</div>
+</section>
+<div class="container">
+  {% for job  in careers %}
+    <div class="col-xs-12 wow {% cycle 'fadeInLeft' 'fadeInRight' %}" data-wow-delay="0.1s">
+        <div class="card">
+            <div class="card-block">
+              <h3 class="card-title">{% if job.job_name %}{{job.job_name}}{% elif job.name %}{{job.name}}{% endif %}</h3>
+              {% if job.job.position %}<p>Position: {{job.position}}</p>{% endif %}
+              {% if job.job.qualification %}<p>Qualification: {{job.qualification}}</p>{% endif %}
+              {% if job.job.job_type %}<p>Job Type: {{job.job_type}}</p>{% endif %}
+              {% if job.job.location %}<p>Location: {{job.location}}</p>{% endif %}
+              {% if job.job.no_of_position %}<p>Vacancies: {{job.no_of_position}}</p>{% endif %}
+              {% if job.job.experience %}<p>Experience: {{job.experience}}</p>{% endif %}
+              {% if job.job.description %}<p>Description: {{job.description}}</p>{% endif %}
+              {% if job.job.skill_required %}<p>Skills Required: {{job.skill_required}}</p>{% endif %}
+              {% if job.job.remuneration %}<p>Remuneration: {{job.remuneration}}</p>{% endif %}
+            </div>
+        </div>
+    </div>
+  {% empty %}
+    No Jobs
+  {% endfor %}
+</div>
+
+{% for career in careers%}
+
+{% endfor %}
+{% endblock maincontent %}

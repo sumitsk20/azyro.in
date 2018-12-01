@@ -741,24 +741,24 @@ body.on-side .wrap-sticky nav.navbar.bootsnav.sticked{
 
     nav.navbar.bootsnav.navbar-fixed.navbar-transparent .logo-scrolled,
     nav.navbar.bootsnav.navbar-fixed.no-background .logo-scrolled{
-        opacity: 0;
-    	height: 0;
+        opacity: 1;
+    	height: 55px;
     }
 
     nav.navbar.bootsnav.navbar-fixed.navbar-transparent .logo-display,
     nav.navbar.bootsnav.navbar-fixed.no-background .logo-display{
         opacity: 1;
-    	height: auto;
+    	max-height: 55px;
     }
 
     nav.navbar.bootsnav.navbar-fixed .logo-display{
-        opacity: 0;
-    	height: 0;
+        opacity: 1;
+    	height: 55px;
     }
 
     nav.navbar.bootsnav.navbar-fixed .logo-scrolled{
         opacity: 1;
-    	height: auto;
+    	max-height: 55px;
     }
 
     /* Atribute Navigation

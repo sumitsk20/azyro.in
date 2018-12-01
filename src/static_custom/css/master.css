@@ -270,13 +270,13 @@ nav.navbar.bootsnav.navbar-transparent .logo {
     position: relative;
     z-index: 110;
     display: table;
-    height: 60px;
+    height: 55px;
     -webkit-transition: all .3s ease;
     transition: all .3s ease;
 }
 
 .logo img {
-    max-height: 33px;
+    max-height: 55px;
 	-webkit-transition: all .5s ease;
     transition: all .5s ease;
     display: block;
@@ -2566,7 +2566,181 @@ img.mfp-img {
     color: #fff;
 	background: #346734;
 }
+.case {
+    margin: 40px 0;
+    padding: 0 10px;
+}
+.team-slider .case {
+    margin: 20px 0;
+    padding: 0 10px;
+}
+.team-fullwidth .case {
+    margin: 0;
+    padding: 0;
+}
+.p0.case {
+    margin: 0;
+    padding: 0;
+}
+.team-case-container {
+    position: relative;
+    overflow: hidden;
+}
+.team-case-img img {
+    width: 100%;
+}
+.team-case-container .case-caption {
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+    height: 100%;
+    opacity: 0;
+	visibility:hidden;
+    top: 0;
+    background-color: rgba(52,103,52,0.92);
+    -webkit-transition: opacity 0.4s;
+    transition: opacity 0.4s;
+}
+.team-case-container:hover .case-caption {
+    opacity: 1;
+	visibility:visible;
+}
+.case-description {
+    width: 100%;
+    height: 100%;
+}
+.case-description-wrap {
+	position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    margin-top: -88px;
+}
+.case-description .case-title, .case-description .case-subtitle {
+    position: relative;
+    left: 0;
+    color: #fff;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+}
 
+
+
+.case-description .case-title{
+	top: 0;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}
+
+.case-description .case-subtitle {
+    top: 0;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -o-transition: 0.4s;
+    transition: 0.4s;
+}
+
+.team-case-container:hover .case-description .case-title {
+    opacity: 1;
+	visibility: visible;
+	top: 30px;
+}
+
+.team-case-container:hover .case-description .case-subtitle {
+    opacity: 1;
+	visibility: visible;
+	top: 25px;
+}
+
+.case-icons {
+	position: relative;
+    left: 0;
+    top: 30px;
+    width: 100%;
+}
+
+.case-icons li {
+    display: inline-block;
+    position: relative;
+    bottom: -40px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateZ(0);
+    margin-right: 5px;
+}
+.case-icons li a {
+    display: block;
+    color: #fff;
+}
+.case-icons li a:hover {
+    color: #82eb80;
+}
+
+.team-case-container:hover .case-icons li {
+    opacity: 1;
+	visibility: visible;
+	bottom: 0;
+}
+
+.team-case-container:hover .case-icons li:nth-child(1) {
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}
+
+.team-case-container:hover .case-icons li:nth-child(2) {
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+}
+
+.team-case-container:hover .case-icons li:nth-child(3) {
+    -webkit-transition: 0.6s;
+    -moz-transition: 0.6s;
+    -o-transition: 0.6s;
+    transition: 0.6s;
+}
+
+.corporate-case .case-description-wrap, .startup-case .case-description-wrap, .media-case .case-description-wrap {
+	position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    margin-top: -48px;
+}
+
+.corporate-case h4, .startup-case h4{
+	margin-top:30px;
+	margin-bottom: 5px;
+}
+
+.startup-case .case {
+	padding:0;
+}
+
+.media-case h4 {
+	margin-top:0;
+}
+
+.media-case .case-icons li a {
+    display: block;
+    color: #fff;
+    background: #82eb80;
+    width: 35px;
+    height: 35px;
+    line-height: 37px;
+    border-radius: 100px;
+}
+
+.media-case .case-icons li a:hover {
+    color: #fff;
+	background: #346734;
+}
 /* 8.1 Owl carousel */
 
 
@@ -4938,7 +5112,7 @@ margin-left:15px;
 #what-we-do{
 	background:#ffffff;
 }
-#what-we-do .card{
+.card{
 	padding: 1rem!important;
 	border: none;
 	min-height:95px;
@@ -4947,30 +5121,30 @@ margin-left:15px;
 	-moz-transition: .5s all ease;
 	transition: .5s all ease;
 }
-#what-we-do .card:hover{
+.card:hover{
 	-webkit-box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
 	-moz-box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
 	box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
 }
-#what-we-do .card .card-block{
+.card .card-block{
 	padding-left: 50px;
     position: relative;
 }
-#what-we-do .card .card-block a{
+.card .card-block a{
 	color: #007b5e !important;
 	font-weight:700;
 	text-decoration:none;
 }
-#what-we-do .card .card-block a i{
+.card .card-block a i{
 	display:none;
 
 }
-#what-we-do .card:hover .card-block a i{
+.card:hover .card-block a i{
 	display:inline-block;
 	font-weight:700;
 
 }
-#what-we-do .card .card-block:before{
+.card .card-block:before{
 	font-family: FontAwesome;
     position: absolute;
     font-size: 39px;
@@ -4979,7 +5153,7 @@ margin-left:15px;
 	-webkit-transition: -webkit-transform .2s ease-in-out;
     transition:transform .2s ease-in-out;
 }
-#what-we-do .card:hover .card-block:before{
+.card:hover .card-block:before{
 	-webkit-transform: rotate(360deg);
 	transform: rotate(360deg);
 	-webkit-transition: .5s all ease;
