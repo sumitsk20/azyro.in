@@ -5,6 +5,5 @@ django-jet==1.0.7
 django-js-asset==1.0.0
 flup==1.0.3.dev20110405
 Pillow==3.4.1
-pkg-resources==0.0.0
 PyMySQL==0.8.0
 pytz==2018.3
