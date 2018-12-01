@@ -20,7 +20,7 @@ urlpatterns = [
     url(r'^jet/', include('jet.urls', 'jet')),
     url(r'^jet/dashboard/', include('jet.dashboard.urls', 'jet-dashboard')),
     url(r'^admin/', admin.site.urls),
-    url(r'^ckeditor/', include('ckeditor_uploader.urls')),
+    # url(r'^ckeditor/', include('ckeditor_uploader.urls')),
   #  url(r'^sitemap\.xml$', sitemap, {'sitemaps': sitemaps},
   #              name='django.contrib.sitemaps.views.sitemap'),
     url(r'^',include('aztech.urls')),

@@ -2,13 +2,11 @@
 from __future__ import unicode_literals
 
 from django.db import models
-from ckeditor.fields import RichTextField
 from django.urls import reverse
 
 from .utils import upload_location
 from django.db.models.signals import pre_save
 from django.utils.text import slugify
-from ckeditor_uploader.image import pillow_backend as backend
 from .constants import CONST_PROJECT_STATUS
 
 
@@ -50,7 +48,7 @@ class Project(BaseClass):
     slug = models.SlugField(unique=True,null=True,editable=False)
     status = models.CharField(choices=CONST_PROJECT_STATUS, max_length=25, default=CONST_PROJECT_STATUS[0])
     image = models.ImageField(upload_to=upload_location,blank=True,null=True)
-    content = RichTextField(blank=True,null=True)
+    content = models.TextField(blank=True,null=True)
     site = models.CharField(max_length=200, blank=True, null=True)
     client = models.CharField(max_length=200, blank=True, null=True)
     location = models.CharField(max_length=200, blank=True, null=True)
@@ -85,7 +83,7 @@ class Member(BaseClass):
     role = models.CharField(max_length=50, help_text='Your Job profile in company.')
     experience = models.PositiveIntegerField(blank=True, null=True)
     image = models.ImageField(upload_to=upload_location, blank=True,null=True)
-    bio = RichTextField(blank=True,null=True)
+    bio = models.TextField(blank=True,null=True)
     email = models.EmailField(blank=True,null=True)
     lp = models.URLField('LinkedIn URL',blank=True,null=True)
 
@@ -100,7 +98,7 @@ class Member(BaseClass):
 class Section(BaseClass):
     tagline = models.CharField(max_length=160,help_text='Not more than 160 Character.', blank=True,null=True)
     image = models.ImageField(upload_to=upload_location, blank=True,null=True)
-    content = RichTextField(blank=True,null=True)
+    content = models.TextField(blank=True,null=True)
 
     class Meta:
         verbose_name = "Section"
@@ -109,7 +107,7 @@ class Section(BaseClass):
 
 class Service(BaseClass):
     image = models.ImageField(upload_to=upload_location, blank=True,null=True)
-    content = RichTextField(blank=True,null=True)
+    content = models.TextField(blank=True,null=True)
     category = models.ForeignKey(Category, blank=True, null=True)
     icon = models.CharField(max_length=100, blank=True, null=True)
 
