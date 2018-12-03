@@ -108,7 +108,7 @@ class Section(BaseClass):
 class Service(BaseClass):
     image = models.ImageField(upload_to=upload_location, blank=True,null=True)
     content = models.TextField(blank=True,null=True)
-    category = models.ForeignKey(Category, blank=True, null=True)
+    category = models.ForeignKey(Category, blank=True, null=True, on_delete=models.CASCADE)
     icon = models.CharField(max_length=100, blank=True, null=True)
 
     class Meta:
